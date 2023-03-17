@@ -1,3 +1,17 @@
+Judul : Proses order makanan via online
+
+1. Memilih Tempat makanan yang ingin dipesan.. 
+2. Menampilkan list makanan.
+3. Memilih makanan yang diinginkan.
+4. Setelah memilih menu dapat menambahkan ke keranjang belanja.
+5. Melakukan checkuot makanan yang telah dipilih.
+6. Menentukan lokasi pengiriman makanan.
+7. Melakukan proses perhitungan.
+8. Melakukan proses pembayaran.
+9. Sistem akan mengkonfirmasi pembayaran.
+10. Jika dalam proses pembayaran gagal akan kembali ke 6.
+11. Jika dalam proses pembayaran berhasil maka akan dilanjutkan ke tahap pengiriman.
+
 Program Proses order makanan via online
 
 START
@@ -15,7 +29,7 @@ WHILE "konfirmasi_jika_sukses" = FALSE
     VALIDATE "pembayaran"
     IF "PEMBAYARAN" IS SUCCESS
         SET "pembayaran_sukses" = TRUE
-        CONTINUE TO Melakukan pengiriman()
+        CONTINUE TO Melakukan_pengiriman()
     ELSE 
         GO TO LINE 13
 END
