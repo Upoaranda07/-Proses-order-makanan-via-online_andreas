@@ -1,0 +1,21 @@
+Program Proses order makanan via online
+
+START
+READ INPUT "memilih_tempat_makan"
+SHOW listMakanan WHERE tempat makan "memilih_tempat_makan"
+READ INPUT "makanan_yang_diinginkan" with array
+READ INPUT "menambahkan_kekeranjang" FROM "makanan_yang_diinginkan"
+CALCULATE "total_belanja" FROM "makanan yang diinginkan"
+READ INPUT "lokasi_pengiriman_makanan" 
+CALCULATE "ongkir" WHERE TRACK IS FROM LokasiTempatmakan TO "lokasi_pengiriman_makanan"
+CALCULATE "total_belanja" ADDED "ongkir"
+WRITE "konfirmasi_jika_sukses" = FALSE
+WHILE "konfirmasi_jika_sukses" = FALSE
+    DO READ "pembayaran" 
+    VALIDATE "pembayaran"
+    IF "PEMBAYARAN" IS SUCCESS
+        SET "pembayaran_sukses" = TRUE
+        CONTINUE TO Melakukan pengiriman()
+    ELSE 
+        GO TO LINE 13
+END
